@@ -60,8 +60,7 @@ end
 % as represented in the matrix.
 A = spdiags([beta^2, 1, alpha, 1, beta^2],[-size(b,1),-1,0,1,size(b,1)],numel(b),numel(b)); % Contructing the sparse matricies:
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% Cleaning up the vertical wrap around:
+
 for column = 1:size(b,2)
     base = (column - 1)*size(b,1);
     if column < size(b,2)
@@ -85,4 +84,5 @@ colormap('jet');        % choose a colormap ('jet', 'parula', 'hot', etc.)
 title('Five-Point direct formulation for Steady State Heat equation');
 xlabel('X-axis');
 ylabel('Y-axis');
+
 
