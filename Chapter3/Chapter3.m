@@ -83,43 +83,21 @@ end
 
 
 
-% % FTCS explicit plotting:
-% subplot(3,1,1)
-% hold on 
-% for i = [find(t == .18),find(t == 0.36),find(t == .54),find(t == .72),find(t == .90),find(t == 1.08),find(t == 5)]
-%     plot(Uftcs(:,i),y,'^-')
-% end
-% title(sprintf('Velocity Profiles obtained by FTCS Explicit method, \\Delta t = %.3f s, \\Delta y = %.3f m', dt, dy))
-% legend('t = .18', 't = 0.36', 't = 0.54', 't = 0.72', 't = .90', 't = 1.08' )
-% xlabel('u (m/sec)')
-% ylabel('y (m)')
-% hold off
-% 
-% % Dufort - Frankel explicit plotting:
-% subplot(3,1,2)
-% hold on 
-% for i = [find(t == .18),find(t == 0.36),find(t == .54),find(t == .72),find(t == .90),find(t == 1.08),find(t == 5)]
-%     plot(Udf(:,i),y,'^-')
-% end
-% title(sprintf('Velocity Profiles obtained by Dufort - Frankel Explicit method, \\Delta t = %.3f s, \\Delta y = %.3f m', dt, dy))
-% legend('t = .18', 't = 0.36', 't = 0.54', 't = 0.72', 't = .90', 't = 1.08' )
-% xlabel('u (m/sec)')
-% ylabel('y (m)')
-% hold off
-% 
-% % Crank - Nicholson Plotting
-% subplot(3,1,3)
-% hold on 
-% for i = [find(t == .18),find(t == 0.36),find(t == .54),find(t == .72),find(t == .90),find(t == 1.08),find(t == 5)]
-%     plot(Ucn(:,i),y,'^-')
-% end
-% title(sprintf('Velocity Profiles obtained by Crank - Nicolson method, \\Delta t = %.3f s, \\Delta y = %.3f m', dt, dy))
-% legend('t = .18', 't = 0.36', 't = 0.54', 't = 0.72', 't = .90', 't = 1.08' )
-% xlabel('u (m/sec)')
-% ylabel('y (m)')
-% hold off
-
-
+% FTCS explicit plotting:
+subplot(3,1,1)
+hold on 
+for i = [find(t == .18),find(t == 0.36),find(t == .54),find(t == .72),find(t == .90),find(t == 1.08),find(t == 5)]
+    plot(Uftcs(:,i),y,'^-')
+end
+title(sprintf('Velocity Profiles obtained by FTCS Explicit method, \\Delta t = %.3f s, \\Delta y = %.3f m', dt, dy))
+legend('t = .18', 't = 0.36', 't = 0.54', 't = 0.72', 't = .90', 't = 1.08' )
+xlabel('u (m/sec)')
+ylabel('y (m)')
+hold off
+ 
+% Dufort - Frankel explicit plotting:
+subplot(3,1,2)
+hold on 
 for i = [find(t == .18),find(t == 0.36),find(t == .54),find(t == .72),find(t == .90),find(t == 1.08),find(t == 5)]
     plot(Udf(:,i),y,'^-')
 end
@@ -128,3 +106,18 @@ legend('t = .18', 't = 0.36', 't = 0.54', 't = 0.72', 't = .90', 't = 1.08' )
 xlabel('u (m/sec)')
 ylabel('y (m)')
 hold off
+ 
+% Crank - Nicholson Plotting
+subplot(3,1,3)
+hold on 
+for i = [find(t == .18),find(t == 0.36),find(t == .54),find(t == .72),find(t == .90),find(t == 1.08),find(t == 5)]
+    plot(Ucn(:,i),y,'^-')
+end
+title(sprintf('Velocity Profiles obtained by Crank - Nicolson method, \\Delta t = %.3f s, \\Delta y = %.3f m', dt, dy))
+legend('t = .18', 't = 0.36', 't = 0.54', 't = 0.72', 't = .90', 't = 1.08' )
+xlabel('u (m/sec)')
+ylabel('y (m)')
+hold off
+
+
+
