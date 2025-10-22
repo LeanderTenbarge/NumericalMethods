@@ -1,7 +1,7 @@
 % Leander Tenbarge:
 % Point Gauss - Seidel for Temperature Distribution:
 % Page 175 - 176:
-
+clear all
 % System Setup as listed in page 155:
 width = 1; 
 height = 1; 
