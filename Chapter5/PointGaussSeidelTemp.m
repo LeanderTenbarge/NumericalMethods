@@ -47,7 +47,7 @@ end
 
 
 % Plotting the results
-imagesc(x);        
+imagesc(T);        
 colorbar;             
 colormap('jet');        
 title('Gauss Siedel, Steady State Heat equation');
