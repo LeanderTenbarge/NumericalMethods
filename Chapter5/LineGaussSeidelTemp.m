@@ -9,7 +9,7 @@ numPW = 50; % Number points in the width:
 numPH = 50; % Number of points in the height:
 dx = width/numPW;
 dy = height/numPH;
-n = 100;
+n = 500;
 beta = dx/dy;
 Tupper = 0;   % rankine
 Tleft  = 0;   % rankine
@@ -39,7 +39,7 @@ for time = 1:n
 
         % Enforcing the Boundary conditions:
         B(1) = -T(1,j);
-        B(numPH-2) = -T(1,j);
+        B(numPH-2) = -T(end,j);
         
         % Creating the rest of the left hand side:
         for i = 1:numPH-2
@@ -49,7 +49,7 @@ for time = 1:n
 end
 
 % Plotting the results
-imagesc(x);        
+imagesc(T);        
 colorbar;             
 colormap('jet');        
 title('Line Gauss Siedel, Steady State Heat equation');
