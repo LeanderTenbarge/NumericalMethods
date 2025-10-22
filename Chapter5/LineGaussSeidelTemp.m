@@ -1,7 +1,7 @@
 % Leander Tenbarge, Hoffman CFD Chapter 5, Numerical Methods for Elliptic partial differential equations:
 % Line Gauss Seidel Method:
 % Page 153-155:
-
+clear all
 % System Setup as listed in page 155:
 width = 1; 
 height = 1; 
