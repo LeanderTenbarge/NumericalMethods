@@ -1,5 +1,6 @@
 % Leander Tenbarge, Hoffman CFD Chapter 5, Numerical Methods for Elliptic partial differential equations:
-% Steady State Heat Condution via various method introduced in chronological order as in the reference material:
+% Implicit 5 point formulation:
+% Page 153-155
 
 clear all
 
@@ -84,5 +85,6 @@ colormap('jet');        % choose a colormap ('jet', 'parula', 'hot', etc.)
 title('Five-Point direct formulation for Steady State Heat equation');
 xlabel('X-axis');
 ylabel('Y-axis');
+
 
 
