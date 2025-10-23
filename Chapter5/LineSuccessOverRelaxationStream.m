@@ -13,10 +13,6 @@ dx = width/numPW;
 dy = height/numPH;
 n = 5000;
 beta = dx/dy;
-Tupper = 0;   % rankine
-Tleft  = 0;   % rankine
-Tright = 100; % rankine
-Tlower = 100; % rankine
 alpha = -2*(1+ beta^2); 
 omega = 1;
 
